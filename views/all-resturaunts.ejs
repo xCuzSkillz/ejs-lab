@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Resturants</title>
+</head>
+<body>
+    <%- include("./components/navbar.ejs") %>
+    <h1>All Resturaunts</h1>
+    <% resturaunts.forEach((e) => { %>
+           <br><a href="/resturaunts/<%=e.id%>"><%=e.name%> - <%= !e.isOpen ? "Closed" : "" %></a>
+    <%  }) %>
+</body>
+</html>

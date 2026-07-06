@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturaunt details</title>
+</head>
+<body>
+    <%- include("./components/navbar.ejs") %>
+    <h1>Resturaunt details</h1>
+    <div>
+        <p>Name: <%= resturaunt.name %></p>
+                <p>Address: <%= resturaunt.address %></p>
+        <p>Phone: <%= resturaunt.phone %></p>
+        <div>
+            <h2>Menu:</h2>
+            <% resturaunt.menu.forEach(e => { %>
+                <br><p>Item: <%= e.name %></p> <p>Price: <%= e.price %></p><p>Raiting: <%= e.rating %></p>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
